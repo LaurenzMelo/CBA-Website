@@ -1,0 +1,102 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: AvenirNextLTPro-Heavy;
+    src: url('public/fonts/AvenirNextLTPro-Heavy.otf');
+}
+
+.font-avenir {
+    font-family: 'AvenirNextLTPro-Heavy', sans-serif;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-train-one {
+    font-family: 'Train One', cursive;
+}
+
+.font-index-big {
+    font-size: 7rem !important;
+}
+
+.text-indent {
+    text-indent: 15px !important;
+}
+
+.hr-15 {
+    width: 15%;
+    border-top: 4px solid #DA674A;
+}
+
+.hr-10 {
+    width: 10%;
+    border-top: 4px solid #DA674A;
+}
+
+.navbar-spacing {
+    letter-spacing: 1px;
+}
+
+.navbar-fontsize {
+    font-size: 13px !important;
+}
+
+.font-black {
+    color: #222222 !important;
+}
+
+.font-white {
+    color: #DDDDDD !important;
+}
+
+.active {
+    border-top: 3px solid #DA674A !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.border {
+    border: 1px solid black !important;
+}
+
+.border-left {
+    border-left: 2px solid black !important;
+}
+
+.border-right {
+    border-right: 2px solid black !important;
+}
+
+.font-size-footer {
+    font-size: 16px !important
+}
+
+.link-footer {
+    text-decoration: none !important;
+    color:#2B4D59 !important;
+}
+
+.btn-orange {
+    color: #222;
+    background-color: #FFAA67;
+    border-color: #FFAA67;
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background-color: #DA674A;
+    border-color: #DA674A;
+}
+
+
+
+
