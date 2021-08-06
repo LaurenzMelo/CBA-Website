@@ -10942,6 +10942,75 @@ a.text-dark:focus {
   }
 }
 
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  min-height: 100vh;
+  min-width: 200px;
+}
+
+#sidebar.active {
+  margin-left: -200px;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  background: #466289;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #466289;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: #CCC;
+}
+
+#sidebar ul li a:hover {
+  color: #2d4e7d;
+  text-decoration: none;
+  background: #fff;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded=true] {
+  color: #fff;
+  text-decoration: none;
+  background: #2d4e7d;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #2d4e7d;
+}
+
 @font-face {
   font-family: AvenirNextLTPro-Heavy;
   src: url(/fonts/AvenirNextLTPro-Heavy.otf?1c3354b508f3f611a88e64bf6ee69c84);
@@ -10964,7 +11033,7 @@ a.text-dark:focus {
 }
 
 .text-indent {
-  text-indent: 15px !important;
+  text-indent: 30px !important;
 }
 
 .hr-15 {
@@ -10994,13 +11063,9 @@ a.text-dark:focus {
 }
 
 .active {
-  border-top: 3px solid #DA674A !important;
+  border-top: 3px solid #222222 !important;
   margin-top: 0px !important;
   padding-top: 0px !important;
-}
-
-.border {
-  border: 1px solid black !important;
 }
 
 .border-left {
@@ -11030,6 +11095,99 @@ a.text-dark:focus {
   color: #fff;
   background-color: #DA674A;
   border-color: #DA674A;
+}
+
+.btn-yellow {
+  color: #222;
+  background-color: #F6B239;
+  border-color: #F6B239;
+}
+
+.btn-yellow:hover {
+  color: #FFF;
+  background-color: #D18600;
+  border-color: #D18600;
+}
+
+.bg {
+  background-image: url(/images/lualhati.png?b5d5a99ee99a6c066f6ce95023320465);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.other-bg {
+  background-image: url(/images/building.png?1c19ad7ca9f25af0c276250e7a7c211c);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.olOffice {
+  text-decoration: none !important;
+  color: black;
+}
+
+.blue-link {
+  color: blue;
+}
+
+.nav-white {
+  background-color: #FFFFFF;
+}
+
+.nav-blue-green {
+  background-color: #2B4D59;
+}
+
+.nav-light-bg {
+  background-color: #469A8F;
+}
+
+.nav-yellow {
+  background-color: #F6B239;
+}
+
+.nav-orange {
+  background-color: #F4A865;
+}
+
+.nav-red {
+  background-color: #DA674A;
+}
+
+.color-blue-green {
+  color: #2B4D59;
+}
+
+.color-light-bg {
+  color: #469A8F;
+}
+
+.color-yellow {
+  color: #F6B239;
+}
+
+.color-orange {
+  color: #F4A865;
+}
+
+.color-red {
+  color: #DA674A;
+}
+
+.parallax {
+  height: 300px;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social-icons {
+  height: 60px;
+  width: 60px;
 }
 
 

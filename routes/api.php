@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\API\AnnouncementsController;
+use App\Http\Controllers\API\ReportsController;
+use App\Http\Controllers\API\BlogsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +19,33 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::post('login', 'API\UserController@login');
+Route::post('register', 'API\UserController@register');
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('details', 'API\UserController@details');
+});
+
+Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'reports'], function () {
+        Route::get('getReports', [ReportsController::class, 'getReports']);
+        Route::get('getProgressReports', [ReportsController::class, 'getProgressReports']);
+        Route::get('getTransparencyReports', [ReportsController::class, 'getTransparencyReports']);
+        Route::post('store', [ReportsController::class, 'store']);
+        Route::post('delete', [ReportsController::class, 'delete']);
+    });
+
+    Route::group(['prefix' => 'announcements'], function () {
+        Route::get('getAnnouncement', [AnnouncementsController::class, 'getAnnouncement']);
+        Route::get('getThreeAnnouncement', [AnnouncementsController::class, 'getThreeAnnouncement']);
+        Route::post('store', [AnnouncementsController::class, 'store']);
+        Route::post('delete', [AnnouncementsController::class, 'delete']);
+    });
+
+    Route::group(['prefix' => 'blogs'], function () {
+        Route::get('getAllBlog', [BlogsController::class, 'getAllBlog']);
+        Route::post('store', [BlogsController::class, 'store']);
+        Route::post('delete', [BlogsController::class, 'delete']);
+    });
 });
