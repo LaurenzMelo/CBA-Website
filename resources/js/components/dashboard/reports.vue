@@ -162,7 +162,7 @@ export default {
                             'Report is deleted.',
                             'success'
                         )
-                        location.reload();
+                        this.getReports();
                     })
                 }
             });

@@ -70,4 +70,15 @@ class BlogsController extends Controller
             return response()->json(['message' => 'Failed to delete.']);
         }
     }
+
+    public function editBlog(Request $request) 
+    {
+        $edit = Blog::where('id', $request->id)
+                ->update([
+                    'title' => $request->title,
+                    'author_name' => $request->author_name,
+                    'date_published' => $request->date_published,
+                    'content' => $request->content,
+                ]);
+    }
 }

@@ -3,6 +3,8 @@
 use App\Http\Controllers\API\AnnouncementsController;
 use App\Http\Controllers\API\ReportsController;
 use App\Http\Controllers\API\BlogsController;
+use App\Http\Controllers\API\FormsController;
+use App\Http\Controllers\API\NewsletterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +41,7 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::group(['prefix' => 'announcements'], function () {
         Route::get('getAnnouncement', [AnnouncementsController::class, 'getAnnouncement']);
         Route::get('getThreeAnnouncement', [AnnouncementsController::class, 'getThreeAnnouncement']);
+        Route::post('editAnn', [AnnouncementsController::class, 'editAnn']);
         Route::post('store', [AnnouncementsController::class, 'store']);
         Route::post('delete', [AnnouncementsController::class, 'delete']);
     });
@@ -47,5 +50,19 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
         Route::get('getAllBlog', [BlogsController::class, 'getAllBlog']);
         Route::post('store', [BlogsController::class, 'store']);
         Route::post('delete', [BlogsController::class, 'delete']);
+        Route::post('editBlog', [BlogsController::class, 'editBlog']);
+    });
+
+    Route::group(['prefix' => 'forms'], function () {
+        Route::get('getForms', [FormsController::class, 'getForms']);
+        Route::post('store', [FormsController::class, 'store']);
+        Route::post('delete', [FormsController::class, 'delete']);
+    });
+
+    Route::group(['prefix' => 'newsletter'], function () {
+        Route::get('getNewsletter', [NewsletterController::class, 'getNewsletter']);
+        Route::post('editNewsletter', [NewsletterController::class, 'editNewsletter']);
+        Route::post('store', [NewsletterController::class, 'store']);
+        Route::post('delete', [NewsletterController::class, 'delete']);
     });
 });

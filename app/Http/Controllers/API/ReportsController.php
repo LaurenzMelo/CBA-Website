@@ -13,6 +13,20 @@ class ReportsController extends Controller
         return view('pages/dashboard/reports');
     }
 
+    public function transparencyReports() 
+    {
+        $t_report = Report::where('type', 'Transparency')->orderBy('event_date', 'DESC')->get();
+        
+        return view('pages/website/transparency_report', compact('t_report'));
+    }
+
+    public function progressReports() 
+    {
+        $p_report = Report::where('type', 'Progress')->orderBy('event_date', 'DESC')->get();
+        
+        return view('pages/website/progress_report', compact('p_report'));
+    }
+
     public function getReports()
     {
         return Report::orderBy('event_date')->get();

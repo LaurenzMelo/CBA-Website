@@ -85,21 +85,16 @@
                             <a href="{{ route('announcements') }}">Announcements</a>
                         </li>
                         <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Forms</a>
-                            <ul class="collapse list-unstyled" id="pageSubmenu">
-                                <li>
-                                    <a href="{{ route('forms.processes') }}">Processes</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('forms.download') }}">Downloadable Forms</a>
-                                </li>
-                            </ul>
+                            <a href="{{ route('blogs') }}">Blogs</a>
                         </li>
                         <li>
                             <a href="{{ route('events') }}">Events</a>
                         </li>
                         <li>
-                            <a href="{{ route('blogs') }}">Blogs</a>
+                            <a href="{{ route('forms') }}">Forms & Processes</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('newsletter') }}">Newsletter</a>
                         </li>
                         <li>
                             <a href="{{ route('reports') }}">Reports</a>

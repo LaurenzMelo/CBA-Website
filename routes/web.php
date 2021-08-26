@@ -6,6 +6,7 @@ use App\Http\Controllers\API\EventsController;
 use App\Http\Controllers\API\FormsController;
 use App\Http\Controllers\API\ReportsController;
 use App\Http\Controllers\API\WebsiteController;
+use App\Http\Controllers\API\NewsletterController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,8 @@ Route::group(['prefix' => '/'], function () {
     Route::group(['prefix' => 'reports'], function () {
         Route::get('getProgressReports', [ReportsController::class, 'getProgressReports']);
         Route::get('getTransparencyReports', [ReportsController::class, 'getTransparencyReports']);
+        Route::get('transparency-reports', [ReportsController::class, 'transparencyReports']);
+        Route::get('progress-reports', [ReportsController::class, 'progressReports']);
     });
 
     Route::group(['prefix' => 'announcements'], function () {
@@ -50,15 +53,23 @@ Route::group(['prefix' => '/'], function () {
         Route::get('getBlog', [BlogsController::class, 'getBlog']);
         Route::get('{id}', [BlogsController::class, 'getIndBlog'])->name('website.ind_blog');
     });
+
+    Route::group(['prefix' => 'forms'], function () {
+        Route::get('getForms', [FormsController::class, 'getForms']);
+    });
+
+    Route::group(['prefix' => 'newsletter'], function () {
+        Route::get('getNewsletter', [NewsletterController::class, 'getNewsletter']);
+    });
 });
 
 //Dashboard
 Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('home', [HomeController::class, 'index'])->name('home');
-    Route::get('forms/processes', [FormsController::class, 'process_index'])->name('forms.processes');
-    Route::get('forms/downloadable_forms', [FormsController::class, 'download_index'])->name('forms.download');
+    Route::get('forms-processes', [FormsController::class, 'index'])->name('forms');
     Route::get('blogs', [BlogsController::class, 'index'])->name('blogs');
     Route::get('reports', [ReportsController::class, 'index'])->name('reports');
     Route::get('announcements', [AnnouncementsController::class, 'index'])->name('announcements');
     Route::get('admin/events', [EventsController::class, 'index'])->name('events');
+    Route::get('newsletter',[NewsletterController::class, 'index'])->name('newsletter');
 });

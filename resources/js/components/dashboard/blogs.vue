@@ -4,7 +4,7 @@
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
                     <h4 class="font-weight-bold"> Blogs </h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#addBlogModal"> Create New Blog </button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#addBlogModal" @click="clearForm"> Create New Blog </button>
                 </div>
                 <div class="table-report mt-4">
                     <table class="table">
@@ -174,7 +174,7 @@
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </div>                                
-                                    <textarea class="form-control" v-model="con.paragraph" required></textarea>
+                                    <textarea class="form-control" v-model="con.paragraph" rows="4" required></textarea>
                                 </div>
                                 <div class="text-center"> 
                                     <button type="btn" class="btn btn-success mt-2" @click="addParagraph"> Add Another Paragraph </button>
@@ -199,6 +199,7 @@ export default {
         return {
             all_blogs: [],
             edit_blog: [],
+            get_id: '',
             form: {
                 title: '',
                 author_name: '',
@@ -217,11 +218,56 @@ export default {
         this.getAllBlog();
     },
     methods: {
+        clearForm() {
+            this.form.title = '';
+            this.form.author_name = '';
+            this.form.date_published = '';
+            this.content = [
+                { paragraph: '' }
+            ];
+        },
+        updateBlog() {
+            Swal.fire({
+                title: 'Edit Blog?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Confirm'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    axios.post('api/blogs/editBlog', {
+                        id: this.get_id,
+                        title: this.form.title,
+                        author_name: this.form.author_name,
+                        date_published: moment(this.form.date_published).format('YYYY-MM-DD'),
+                        content: JSON.stringify(this.content)
+                    }).then(response => {
+                        this.form.title = '';
+                        this.form.author_name = '';
+                        this.form.date_published = '';
+                        this.content = [
+                            { paragraph: '' }
+                        ];
+                        this.getAllBlog();
+
+                        Swal.fire(
+                            'Success!',
+                            'Blog is edited.',
+                            'success'
+                        )
+                        $('#editBlogModal').modal('hide')
+                    })
+                }
+            });
+        },
         getBlogContent(blog) {
-            this.edit_blog = blog;
+            this.get_id = blog.id;
             this.form.title = blog.title;
             this.form.author_name = blog.author_name;
             this.form.date_published = blog.date_published;
+            this.content = JSON.parse(blog.content)
+            console.log(JSON.parse(blog.content))
         },
         deleteBlog(blog) {
             Swal.fire({

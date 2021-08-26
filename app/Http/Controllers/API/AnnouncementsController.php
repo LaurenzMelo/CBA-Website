@@ -53,4 +53,14 @@ class AnnouncementsController extends Controller
 
         return response()->json(['message' => 'Announcement is deleted.']);
     }
+    
+    public function editAnn(Request $request)
+    {
+        $edit = Announcement::where('id', $request->id)
+                ->update([
+                    'title' => $request->title,
+                    'description' => $request->description,
+                    'announcement_date' => $request->announcement_date,
+                ]);
+    }
 }

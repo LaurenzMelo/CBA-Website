@@ -20,15 +20,17 @@ Vue.component('know_us', require('./components/website/know_us.vue').default);
 Vue.component('directories', require('./components/website/directories.vue').default);
 Vue.component('ind_blog', require('./components/website/ind_blog.vue').default);
 Vue.component('all_announcement', require('./components/website/all_announcement.vue').default);
+Vue.component('transparency_report', require('./components/website/transparency_report.vue').default);
+Vue.component('progress_report', require('./components/website/progress_report.vue').default);
 
 //dashboard
 Vue.component('dashboard-index', require('./components/dashboard/index.vue').default);
 Vue.component('dashboard-blogs', require('./components/dashboard/blogs.vue').default);
 Vue.component('dashboard-events', require('./components/dashboard/events.vue').default);
 Vue.component('dashboard-processes', require('./components/dashboard/processes.vue').default);
-Vue.component('dashboard-download', require('./components/dashboard/download.vue').default);
 Vue.component('dashboard-reports', require('./components/dashboard/reports.vue').default);
 Vue.component('dashboard-announcements', require('./components/dashboard/announcements.vue').default);
+Vue.component('dashboard-newsletter', require('./components/dashboard/newsletter.vue').default);
 
 const app = new Vue({
     el: '#app',
