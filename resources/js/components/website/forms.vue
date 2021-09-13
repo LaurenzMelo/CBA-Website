@@ -27,7 +27,7 @@
                             </div>
                             <div> 
                                 <a :href="form.audio_file" :download="form.form_title + ' - audio'" v-if="form.audio_file !== null">
-                                    Video Tutorial
+                                    Audio Tutorial
                                 </a>  
                             </div>
                         </div>

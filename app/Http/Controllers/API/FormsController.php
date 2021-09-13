@@ -59,6 +59,17 @@ class FormsController extends Controller
             return response()->json(['message' => 'Form is not saved.']);
         }
     }
+
+    public function editForms(Request $request)
+    {
+        $edit = Forms::where('id', $request->id)
+        ->update([
+            'form_title' => $request->form_title,
+            'form_description' => $request->form_description,
+            'process_title' => $request->process_title,
+            'process_description' => $request->process_description,
+        ]);
+    }
     
     public function delete(Request $request)
     {

@@ -267,7 +267,6 @@ export default {
             this.form.author_name = blog.author_name;
             this.form.date_published = blog.date_published;
             this.content = JSON.parse(blog.content)
-            console.log(JSON.parse(blog.content))
         },
         deleteBlog(blog) {
             Swal.fire({

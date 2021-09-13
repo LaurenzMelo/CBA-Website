@@ -32,7 +32,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('index', [WebsiteController::class, 'index'])->name('website.index');
     Route::get('processes', [WebsiteController::class, 'processes'])->name('website.processes');
     Route::get('forms', [WebsiteController::class, 'forms'])->name('website.forms');
-    Route::get('events', [WebsiteController::class, 'events'])->name('website.events');
+    Route::get('event', [WebsiteController::class, 'events'])->name('website.events');
     Route::get('blog', [WebsiteController::class, 'blog'])->name('website.blog');
     Route::get('know_us', [WebsiteController::class, 'know_us'])->name('website.know_us');
     Route::get('directories', [WebsiteController::class, 'directories'])->name('website.directories');
@@ -61,6 +61,10 @@ Route::group(['prefix' => '/'], function () {
     Route::group(['prefix' => 'newsletter'], function () {
         Route::get('getNewsletter', [NewsletterController::class, 'getNewsletter']);
     });
+
+    Route::group(['prefix' => 'events'], function () {
+        Route::get('getEvents', [EventsController::class, 'getEvents']);
+    });
 });
 
 //Dashboard
@@ -70,6 +74,6 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('blogs', [BlogsController::class, 'index'])->name('blogs');
     Route::get('reports', [ReportsController::class, 'index'])->name('reports');
     Route::get('announcements', [AnnouncementsController::class, 'index'])->name('announcements');
-    Route::get('admin/events', [EventsController::class, 'index'])->name('events');
+    Route::get('events', [EventsController::class, 'index'])->name('events');
     Route::get('newsletter',[NewsletterController::class, 'index'])->name('newsletter');
 });

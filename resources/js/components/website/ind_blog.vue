@@ -24,12 +24,11 @@
             return {
                 blog: this.ind_blog,
                 content: [],
-                image: 'http://localhost:8000/' + this.ind_blog.image,
+                image: process.env.MIX_VUE_URL + this.ind_blog.image,
             }
         },
         mounted() {
             this.changeContent();
-            console.log(this.ind_blog.image);
         },
         methods: {
             goBack() {

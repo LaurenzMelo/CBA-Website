@@ -5,6 +5,7 @@ use App\Http\Controllers\API\ReportsController;
 use App\Http\Controllers\API\BlogsController;
 use App\Http\Controllers\API\FormsController;
 use App\Http\Controllers\API\NewsletterController;
+use App\Http\Controllers\API\EventsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +56,7 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'forms'], function () {
         Route::get('getForms', [FormsController::class, 'getForms']);
+        Route::post('editForms', [FormsController::class, 'editForms']);
         Route::post('store', [FormsController::class, 'store']);
         Route::post('delete', [FormsController::class, 'delete']);
     });
@@ -64,5 +66,12 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
         Route::post('editNewsletter', [NewsletterController::class, 'editNewsletter']);
         Route::post('store', [NewsletterController::class, 'store']);
         Route::post('delete', [NewsletterController::class, 'delete']);
+    });
+
+    Route::group(['prefix' => 'events'], function () {
+        Route::get('getEvents', [EventsController::class, 'getEvents']);
+        Route::post('store', [EventsController::class, 'store']);
+        Route::post('delete', [EventsController::class, 'delete']);
+        Route::post('editEvent', [EventsController::class, 'editEvent']);
     });
 });

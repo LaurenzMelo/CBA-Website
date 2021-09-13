@@ -18,6 +18,8 @@ class CreateEventsTable extends Migration
             $table->string('name');
             $table->text('summary');
             $table->text('full_details');
+            $table->string('target_audience');
+            $table->string('type');
             $table->string('pubmat_img')->nullable();
             $table->datetime('event_date');
             $table->timestamps();

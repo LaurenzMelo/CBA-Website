@@ -47,7 +47,7 @@
                             @route('website.forms') <hr class="active m-auto" style="width: 50%;"> @endif
                         </li>
                         <li class="nav-item pr-4 pl-4">
-                            <a class="nav-link font-roboto font-black @route('website.events') font-white @endif" href="/events"> EVENTS </a>
+                            <a class="nav-link font-roboto font-black @route('website.events') font-white @endif" href="/event"> EVENTS </a>
                             @route('website.events') <hr class="active m-auto" style="width: 50%;"> @endif
                         </li>
                         <li class="nav-item pr-4 pl-4">
