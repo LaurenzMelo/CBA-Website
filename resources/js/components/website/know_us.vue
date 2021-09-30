@@ -4,11 +4,11 @@
             <div class="col-md-12 pt-4">
                 <h1 class="font-weight-bold text-center mt-5">
                     COLLEGE OF <span class="color-yellow">BUSINESS</span> <span class="color-blue-green">ADMINISTRATION</span>
-                    <br> STUDENT COUNCIL A.Y. 2021-2022
+                    <br> STUDENT COUNCIL
                 </h1>
                 <!-- First Column -->
                 <div class="row text-center mt-5">
-                    <div class="col-md-2 offset-3">
+                    <div class="col-md-2 offset-md-3">
                         <div class="col-md-12">
                             <img src="images/shanen.jpg" height="150" width="150">
                             <div class="font-weight-bold mt-2 mb-0 color-red"> Joshua Levi G. Carandang </div>
@@ -32,7 +32,7 @@
                 </div>
                 <!-- Second Column -->
                 <div class="row text-center mt-5">
-                    <div class="col-md-2 offset-2">
+                    <div class="col-md-2 offset-md-2">
                         <div class="col-md-12">
                             <img src="images/shanen.jpg" height="150" width="150">
                             <div class="font-weight-bold mt-2 mb-0 color-red"> Danz Hendsmith P. Autor </div>
@@ -66,14 +66,14 @@
                     <div class="col-md-2 offset-md-1">
                         <div class="col-md-12">
                             <img src="images/shanen.jpg" height="150" width="150">
-                            <div class="font-weight-bold mt-2 mb-0 color-red"> Charles Louie Magas </div>
+                            <div class="font-weight-bold mt-2 mb-0 color-red"> Charles Louie D. Magas </div>
                             <div class="font-weight-bold"> 1st Year Representative </div>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="col-md-12">
                             <img src="images/shanen.jpg" height="150" width="150">
-                            <div class="font-weight-bold mt-2 mb-0 color-red"> Patricia D. Basilio </div>
+                            <div class="font-weight-bold mt-2 mb-0 color-red"> Niña Patricia D. Basilio </div>
                             <div class="font-weight-bold"> 2nd Year Representative </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                     <div class="col-md-2">
                         <div class="col-md-12">
                             <img src="images/shanen.jpg" height="150" width="150">
-                            <div class="font-weight-bold mt-2 mb-0 color-red"> Shanen L. Del Rosario </div>
+                            <div class="font-weight-bold mt-2 mb-0 color-red"> Prof. Marlyn P. Buendia </div>
                             <div class="font-weight-bold"> Adviser </div>
                         </div>
                     </div>

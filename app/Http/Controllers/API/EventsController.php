@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Throwable;
 
@@ -71,4 +72,14 @@ class EventsController extends Controller
         ]);
     }
 
+    public function getDetailedEvents()
+    {
+        $now = Carbon::now();
+
+        $data['upcoming'] = Event::where('event_date', '>=', $now->endOfDay())->orderBy('event_date', 'ASC')->get();
+        $data['done'] = Event::where('event_date', '<=', $now->startOfDay())->orderBy('event_date', 'DESC')->get();
+
+
+        return response()->json($data);
+    }
 }

@@ -3,7 +3,7 @@
         <div class="container-fluid mb-5">
             <div class="col-md-12 pt-4">
                 <div class="row">
-                    <div class="col-md-8 shadow pt-4 border p-5">
+                    <div class="col-md-8 shadow pt-4 border p-5 blog-mobile">
                         <h1 class="font-weight-bold text-center color-yellow font-avenir mb-4"> BLOGSPOT: YOUR STORY TO TELL</h1>
                         <div v-if="featured_blog.length === 0" class="text-center"> 
                             <h6> As of the moment, our blog page is empty. </h6>

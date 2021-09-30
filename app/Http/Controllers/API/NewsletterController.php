@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Newsletter;
+use App\Models\NewsletterImage;
 use Illuminate\Http\Request;
 
 class NewsletterController extends Controller
@@ -15,26 +16,40 @@ class NewsletterController extends Controller
 
     public function getNewsletter()
     {
-        return Newsletter::orderBy('date_published', 'DESC')->get();
+        return Newsletter::orderBy('date_published', 'DESC')->with('newsletter_images')->get();
     }
 
     public function store(Request $request)
     {
+        // $create = Newsletter::create([
+        //     'title' => $request->title,
+        //     'date_published' => $request->date_published,
+        //     'status' => $request->status,
+        // ]);
+        $create = new Newsletter;
+        $create->title = $request->title;
+        $create->date_published = $request->date_published;
+        $create->status = $request->status;
+        $create->save();
+        
         $image = null;
+        $image_files = $request->file('image');
+        $length = count($request->file('image'));
+        // dd($image_files[1]);
 
         if ($request->file('image') != null) {
-            $file = $request->file('image');
-            $fileName1 = $file->getClientOriginalName();
-            $request->file('image')->move(base_path('public/files/newsletter_files'), $fileName1);
-            $image = 'files/newsletter_files/' . $fileName1;
-        }
+            for ($i = 0; $i < $length; $i++) {
+                $file = $image_files[$i];
+                $fileName1 = $file->getClientOriginalName();
+                $image_files[$i]->move(base_path('public/files/newsletter_files'), $fileName1);
+                $image = 'files/newsletter_files/' . $fileName1;
 
-        $create = Newsletter::create([
-            'title' => $request->title,
-            'date_published' => $request->date_published,
-            'status' => $request->status,
-            'image' => $image
-        ]);
+                $nl = NewsletterImage::create([
+                    'newsletter_id' => $create->id,
+                    'image' => $image,
+                ]);
+            }
+        }
 
         if ($create->saveOrFail()) {
             return response()->json(['message' => 'Newsletter is saved.']);

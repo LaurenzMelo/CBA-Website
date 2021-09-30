@@ -3,7 +3,7 @@
         <div class="container-fluid mb-5">
             <div class="col-md-12 pt-4">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 order-2 other-box-height">
                         <h4 class="font-weight-bold mt-4"> Announcements </h4>
                         <hr class="m-0 hr-15">
                         <div v-if="announcements.length === 0">
@@ -39,30 +39,32 @@
                             </p>
                         </div>
                         <div class="text-center mt-5 mb-5">
-                            <a href="https://bit.ly/UEMlaCBA21-22" class="olOffice">
-                                <h3 class="font-weight-bold mb-0">Online <span style="color: #2B4D59">BA</span><span style="color: #F6B239">SC</span> Office</h3>
+                            <a href="https://bit.ly/UEMlaCBA21-22" class="olOffice" target="_blank">
+                                <h3 class="font-weight-bold mb-0">Join our <span style="color: #2B4D59">CBA</span><span style="color: #F6B239">SC</span> Discord Server</h3>
                                 <h6 class="mt-0">Click Here</h6>
                             </a>
                         </div>
                         <div class="col-md-12 mt-4" v-if="active_newsletter.length === 0">
-                            <h4 class="font-weight-bold mb-3"> Newsletter(s) </h4>
-                            <div class="mt-3 text-center">
+                            <h4 class="font-weight-bold mb-3"> CBA Tribune </h4>
+                            <div class="mt-3 mb-5 text-center">
                                 Empty
                             </div>
                         </div>
                         <div class="col-md-12 mt-4" v-else>
-                            <h4 class="font-weight-bold mb-3"> Newsletter(s) </h4>
+                            <h4 class="font-weight-bold mb-3"> CBA Tribune </h4>
                             <div class="mb-5" v-for="news in active_newsletter" :key="news.id">
                                 <hr>
                                 <h6 class="font-weight-bold"> {{ news.title }} </h6>
                                 <div class="mb-4">
                                     <span> Published: {{ formatDate(news.date_published) }} </span>
                                 </div>
-                                <img :src="news.image" alt="Newsletter Image" style="height: 100%; width: 100%;">
+                                <div v-for="n in news.newsletter_images" :key="n.id">
+                                    <img :src="n.image" alt="Newsletter Image" style="height: 100%; width: 100%;" class="mt-4">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 other-box-height">
                         <div>
                             <h4 class="font-weight-bold mt-4 ml-4"> Transparency Reports </h4>
                             <hr class="m-0 hr-15 ml-4">
@@ -106,7 +108,6 @@
                                         <div class="mr-2">
                                             <div class="font-weight-bold color-blue-green"> {{ report.title }} </div>
                                             <div> {{ formatDate(report.event_date) }} </div>
-                                            <div class="mt-2"> {{ report.description }} </div>
                                         </div>
                                         <div>
                                             <a :href="report.file" :download="report.title" v-if="report.file !== null">

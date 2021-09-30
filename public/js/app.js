@@ -2016,6 +2016,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (result) {
         if (result.isConfirmed) {
           axios.post('api/announcements/editAnn', {
+            id: _this.form.id,
             title: _this.form.title,
             description: _this.form.description,
             announcement_date: moment(_this.form.announcement_date).format('YYYY-MM-DD 00:00:00')
@@ -2033,11 +2034,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     getAnn: function getAnn(ann) {
       this.specific_ann = ann;
+      this.form.id = ann.id;
       this.form.title = ann.title;
       this.form.description = ann.description;
       this.form.announcement_date = ann.announcement_date;
     },
     clearForm: function clearForm() {
+      this.form.id = '';
       this.form.title = '';
       this.form.description = '';
       this.form.announcement_date = '';
@@ -3155,6 +3158,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['auth'],
   data: function data() {
@@ -3232,7 +3237,12 @@ __webpack_require__.r(__webpack_exports__);
         if (result.isConfirmed) {
           var formData = new FormData();
           var file = document.querySelector('#image_file_id');
-          formData.append('image', file.files[0]);
+          var x = 0;
+
+          for (var _x = 0; _x < file.files.length; _x++) {
+            formData.append('image[]', file.files[_x]);
+          }
+
           formData.append('title', _this2.form.title);
           formData.append('date_published', moment(_this2.form.published_date).format('YYYY-MM-DD'));
           formData.append('status', _this2.form.status);
@@ -4065,6 +4075,204 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      cba_heads: [{
+        position: 'College Dean',
+        name: 'Veronica N. ELIZALDE',
+        email: 'veronica.elizalde@ue.edu.ph '
+      }, {
+        position: 'Associate Dean',
+        name: 'Angelito C. DESCALZO',
+        email: 'angelito.descalzo@ue.edu.ph'
+      }, {
+        position: 'College Secretary',
+        name: 'Ofelia D. NILO',
+        email: 'ofelia.nilo@ue.edu.ph'
+      }, {
+        position: 'Department Chair, Accountancy, Business Law and Taxation (ACLAT)',
+        name: 'Joseph Y. CO',
+        email: 'joseph.co@ue.edu.ph'
+      }, {
+        position: 'Department Chair, Marketing, Behavioral Science, Computer and Management (MARBECMAN)',
+        name: 'Marissa L. LANUZA',
+        email: 'marissa.lanuza@ue.edu.ph'
+      }, {
+        position: 'Department Chair, Finance, Economics and Business Mathematics (FECOMATH)',
+        name: 'Carolyn DG. CASTILLO',
+        email: 'carolyn.castillo@ue.edu.ph'
+      }, {
+        position: 'Department Chair, Entreprenuerial Venture and Student Apprenticeship (EVSA)',
+        name: 'Cynthia A. ABELLA',
+        email: 'cynthia.abella@ue.edu.ph'
+      }, {
+        position: 'Administrative Assistant',
+        name: 'Nora R. RODRIGUEZ',
+        email: 'nora.rodriguez@ue.edu.ph'
+      }, {
+        position: 'Office Assistant',
+        name: 'Dandel T. MONTAYRE',
+        email: 'dandel.montayre@ue.edu.ph'
+      }, {
+        position: 'Academic Records Evaluator II',
+        name: 'Ernesto M. COLIBAO, Jr.',
+        email: 'ernesto.colibao@ue.edu.ph'
+      }, {
+        position: 'Academic Records Evaluator I',
+        name: 'Khaterine V. IGNACIO',
+        email: 'khaterine.ignacio@ue.edu.ph'
+      }, {
+        position: 'Messenger-Clerk',
+        name: 'Delpman P. DATU MAMADRA',
+        email: 'delpman.datumamadra@ue.edu.ph'
+      }, {
+        position: 'Clerical Aide',
+        name: 'Denand Kay M. ASUNCION',
+        email: 'denandkay.asuncion@ue.edu.ph'
+      }]
+    };
+  },
+  methods: {
+    check: function check() {
+      console.log(this.cba_heads);
+    }
+  },
+  mounted: function mounted() {
+    this.check();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/website/events.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/website/events.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4076,45 +4284,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      cba_heads: [{
-        position: 'College Dean',
-        name: 'Dean Veronica N. Elizalde',
-        email: 'email@ue.edu.ph'
-      }, {
-        position: 'Associate Dean',
-        name: 'Assoc. Dean Angelito C. Descalzo',
-        email: 'email@ue.edu.ph'
-      }, {
-        position: 'College Secretary',
-        name: 'College Sec. Ofelia D. Nilo',
-        email: 'email@ue.edu.ph'
-      }, {
-        position: 'OJT College Evaluator',
-        name: 'Mr. Ernesto Cobalito',
-        email: 'email@ue.edu.ph'
-      }],
-      dept_chairs: [{
-        department: 'Department 1',
-        name: 'Juan Dela Cruz',
-        email: 'email@ue.edu.ph'
-      }, {
-        department: 'Department 2',
-        name: 'Maria Clara',
-        email: 'email@ue.edu.ph'
-      }, {
-        department: 'Department 3',
-        name: 'Jose Rizal',
-        email: 'email@ue.edu.ph'
+      upcoming: [],
+      done: [],
+      chosen_event: [],
+      paragraph_content: [{
+        paragraph: ''
       }]
     };
   },
-  methods: {
-    check: function check() {
-      console.log(this.cba_heads);
-    }
-  },
   mounted: function mounted() {
-    this.check();
+    this.getDetailedEvent();
+  },
+  methods: {
+    transferEvent: function transferEvent(event) {
+      this.chosen_event = event;
+      this.paragraph_content = JSON.parse(event.full_details);
+      console.log(this.chosen_event);
+    },
+    getDetailedEvent: function getDetailedEvent() {
+      var _this = this;
+
+      axios.get('//' + window.location.host + '/events/getDetailedEvents').then(function (response) {
+        _this.upcoming = response.data.upcoming;
+        _this.done = response.data.done;
+      });
+    },
+    formatDate: function formatDate(date) {
+      return moment(date).format('MMM. DD, YYYY');
+    }
   }
 });
 
@@ -4131,6 +4328,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -4261,6 +4459,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -4583,6 +4782,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -65229,15 +65429,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _events_vue_vue_type_template_id_158b24d0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./events.vue?vue&type=template&id=158b24d0& */ "./resources/js/components/website/events.vue?vue&type=template&id=158b24d0&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _events_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./events.vue?vue&type=script&lang=js& */ "./resources/js/components/website/events.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _events_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _events_vue_vue_type_template_id_158b24d0___WEBPACK_IMPORTED_MODULE_0__.render,
   _events_vue_vue_type_template_id_158b24d0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -65684,6 +65886,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_directories_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./directories.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/website/directories.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_directories_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/website/events.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/website/events.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_events_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./events.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/website/events.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_events_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -66164,7 +66382,9 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("td", { staticClass: "w-15 text-center" }, [
-                    _vm._v(" " + _vm._s(_vm.formatDate(a.event_date)) + " ")
+                    _vm._v(
+                      " " + _vm._s(_vm.formatDate(a.announcement_date)) + " "
+                    )
                   ]),
                   _vm._v(" "),
                   _c("td", { staticClass: "w-15 text-center" }, [
@@ -68916,12 +69136,20 @@ var render = function() {
                 _vm._m(5)
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _c("img", {
-                  staticStyle: { width: "100%", height: "100%" },
-                  attrs: { src: _vm.view_news.image }
-                })
-              ]),
+              _c(
+                "div",
+                { staticClass: "modal-body" },
+                _vm._l(_vm.view_news.newsletter_images, function(n) {
+                  return _c("div", { key: n.id }, [
+                    _c("img", {
+                      staticClass: "mt-4",
+                      staticStyle: { height: "100%", width: "100%" },
+                      attrs: { src: n.image, alt: "Newsletter Image" }
+                    })
+                  ])
+                }),
+                0
+              ),
               _vm._v(" "),
               _vm._m(6)
             ])
@@ -69172,7 +69400,9 @@ var staticRenderFns = [
       "div",
       { staticClass: "d-flex justify-content-between align-items-center" },
       [
-        _c("h4", { staticClass: "font-weight-bold" }, [_vm._v(" Newsletter ")]),
+        _c("h4", { staticClass: "font-weight-bold" }, [
+          _vm._v(" CBA Tribune ")
+        ]),
         _vm._v(" "),
         _c(
           "button",
@@ -69241,9 +69471,10 @@ var staticRenderFns = [
         staticClass: "form-control",
         attrs: {
           type: "file",
-          name: "image_file",
+          name: "image_file[]",
           id: "image_file_id",
           accept: ".jpeg, .jpg, .png",
+          multiple: "",
           required: ""
         }
       })
@@ -70779,70 +71010,76 @@ var render = function() {
     _c("div", { staticClass: "container-fluid mb-5" }, [
       _c("div", { staticClass: "col-md-12 pt-4" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-8 shadow pt-4 border p-5" }, [
-            _c(
-              "h1",
-              {
-                staticClass:
-                  "font-weight-bold text-center color-yellow font-avenir mb-4"
-              },
-              [_vm._v(" BLOGSPOT: YOUR STORY TO TELL")]
-            ),
-            _vm._v(" "),
-            _vm.featured_blog.length === 0
-              ? _c("div", { staticClass: "text-center" }, [
-                  _c("h6", [
-                    _vm._v(" As of the moment, our blog page is empty. ")
-                  ])
-                ])
-              : _c(
-                  "div",
-                  [
-                    _c("h4", { staticClass: "font-weight-bold" }, [
-                      _c("i", [
-                        _vm._v(" " + _vm._s(_vm.featured_blog.title) + " ")
-                      ])
-                    ]),
-                    _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-md-8 shadow pt-4 border p-5 blog-mobile" },
+            [
+              _c(
+                "h1",
+                {
+                  staticClass:
+                    "font-weight-bold text-center color-yellow font-avenir mb-4"
+                },
+                [_vm._v(" BLOGSPOT: YOUR STORY TO TELL")]
+              ),
+              _vm._v(" "),
+              _vm.featured_blog.length === 0
+                ? _c("div", { staticClass: "text-center" }, [
                     _c("h6", [
-                      _vm._v(" " + _vm._s(_vm.featured_blog.author_name) + " ")
-                    ]),
-                    _vm._v(" "),
-                    _c("h6", { staticClass: "mb-4" }, [
-                      _vm._v(
-                        " Published " +
-                          _vm._s(
-                            _vm.formatDate(_vm.featured_blog.date_published)
-                          ) +
-                          " "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("img", {
-                      staticClass: "parallax",
-                      attrs: { src: _vm.featured_blog.image }
-                    }),
-                    _vm._v(" "),
-                    _vm._l(_vm.contents, function(content, index) {
-                      return _c(
-                        "p",
-                        {
-                          key: index,
-                          staticClass: "text-justify text-indent mt-4 mb-2"
-                        },
-                        [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s(content.paragraph) +
-                              "\n                        "
-                          )
-                        ]
-                      )
-                    })
-                  ],
-                  2
-                )
-          ]),
+                      _vm._v(" As of the moment, our blog page is empty. ")
+                    ])
+                  ])
+                : _c(
+                    "div",
+                    [
+                      _c("h4", { staticClass: "font-weight-bold" }, [
+                        _c("i", [
+                          _vm._v(" " + _vm._s(_vm.featured_blog.title) + " ")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("h6", [
+                        _vm._v(
+                          " " + _vm._s(_vm.featured_blog.author_name) + " "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h6", { staticClass: "mb-4" }, [
+                        _vm._v(
+                          " Published " +
+                            _vm._s(
+                              _vm.formatDate(_vm.featured_blog.date_published)
+                            ) +
+                            " "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "parallax",
+                        attrs: { src: _vm.featured_blog.image }
+                      }),
+                      _vm._v(" "),
+                      _vm._l(_vm.contents, function(content, index) {
+                        return _c(
+                          "p",
+                          {
+                            key: index,
+                            staticClass: "text-justify text-indent mt-4 mb-2"
+                          },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(content.paragraph) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      })
+                    ],
+                    2
+                  )
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
@@ -70922,11 +71159,11 @@ var render = function() {
                   {
                     staticClass: "font-weight-bold text-center mb-4 color-red"
                   },
-                  [_vm._v(" College Of Business Administration ")]
+                  [_vm._v(" COLLEGE ACADEMIC OFFICERS AND STAFFERS ")]
                 ),
                 _vm._v(" "),
                 _vm._l(_vm.cba_heads, function(head) {
-                  return _c("div", { staticClass: "mb-4" }, [
+                  return _c("div", { key: head.id, staticClass: "mb-4" }, [
                     _c(
                       "h6",
                       { staticClass: "font-weight-bold color-blue-green mb-0" },
@@ -70935,39 +71172,14 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "d-flex justify-content-between" },
+                      {
+                        staticClass:
+                          "d-flex justify-content-between mobile-view"
+                      },
                       [
                         _c("div", [_vm._v(_vm._s(head.name))]),
                         _vm._v(" "),
                         _c("div", [_vm._v(_vm._s(head.email))])
-                      ]
-                    )
-                  ])
-                }),
-                _vm._v(" "),
-                _c(
-                  "h6",
-                  {
-                    staticClass: "font-weight-bold color-blue-green mb-3 mt-5"
-                  },
-                  [_vm._v("Department Chairs")]
-                ),
-                _vm._v(" "),
-                _vm._l(_vm.dept_chairs, function(dept) {
-                  return _c("div", { staticClass: "mb-4 pl-3" }, [
-                    _c(
-                      "h6",
-                      { staticClass: "font-weight-bold color-blue-green mb-0" },
-                      [_vm._v(_vm._s(dept.department))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "d-flex justify-content-between" },
-                      [
-                        _c("div", [_vm._v(_vm._s(dept.name))]),
-                        _vm._v(" "),
-                        _c("div", [_vm._v(_vm._s(dept.email))])
                       ]
                     )
                   ])
@@ -70989,57 +71201,98 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-6" }, [
-      _c("div", { staticClass: "col-md-12 border shadow p-5" }, [
-        _c(
-          "h4",
-          { staticClass: "font-weight-bold text-center mb-4 color-yellow" },
-          [_vm._v(" CBA Student Council A.Y. 2021-2022 ")]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "row d-flex justify-content-around mt-5" }, [
-          _c("img", {
-            staticClass: "social-icons",
-            attrs: { src: "images/fb.svg", alt: "fb-icon" }
-          }),
+      _c(
+        "div",
+        { staticClass: "col-md-12 border shadow p-5 other-box-height" },
+        [
+          _c(
+            "h4",
+            { staticClass: "font-weight-bold text-center mb-4 color-yellow" },
+            [_vm._v(" CBA Student Council A.Y. 2021-2022 ")]
+          ),
           _vm._v(" "),
-          _c("img", {
-            staticClass: "social-icons",
-            attrs: { src: "images/ig.svg", alt: "ig-icon" }
-          }),
+          _c("div", { staticClass: "row d-flex justify-content-around mt-5" }, [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://www.facebook.com/ue.cbasc",
+                  target: "_blank"
+                }
+              },
+              [
+                _c("img", {
+                  staticClass: "social-icons",
+                  attrs: { src: "images/fb.svg", alt: "fb-icon" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://www.instagram.com/uemnl_cbasc",
+                  target: "_blank"
+                }
+              },
+              [
+                _c("img", {
+                  staticClass: "social-icons",
+                  attrs: { src: "images/ig.svg", alt: "ig-icon" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://twitter.com/uemnl_cbasc",
+                  target: "_blank"
+                }
+              },
+              [
+                _c("img", {
+                  staticClass: "social-icons",
+                  attrs: { src: "images/twitter.svg", alt: "twitter-icon" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "social-icons",
+              attrs: { src: "images/gmail.svg", alt: "gmail-icon" }
+            })
+          ]),
           _vm._v(" "),
-          _c("img", {
-            staticClass: "social-icons",
-            attrs: { src: "images/twitter.svg", alt: "twitter-icon" }
-          }),
+          _c(
+            "h5",
+            {
+              staticClass: "font-weight-bold mt-5 text-center color-blue-green"
+            },
+            [_vm._v(" Join our CBA Discord Server ")]
+          ),
           _vm._v(" "),
-          _c("img", {
-            staticClass: "social-icons",
-            attrs: { src: "images/gmail.svg", alt: "gmail-icon" }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "h5",
-          { staticClass: "font-weight-bold mt-5 text-center color-blue-green" },
-          [_vm._v(" ONLINE CBASC OFFICE ")]
-        ),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "https://bit.ly/UEMlaCBA21-22" } }, [
-          _c("h6", { staticClass: "text-center" }, [
-            _vm._v("https://bit.ly/UEMlaCBA21-22")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "mt-4",
-          attrs: {
-            src: "images/mountains2.jpg",
-            height: "100%",
-            width: "100%",
-            alt: "mountains"
-          }
-        })
-      ])
+          _c(
+            "a",
+            {
+              attrs: { href: "https://bit.ly/UEMlaCBA21-22", target: "_blank" }
+            },
+            [
+              _c("img", {
+                staticClass: "mt-2",
+                attrs: {
+                  src: "images/discord.png",
+                  height: "100%",
+                  width: "100%",
+                  alt: "mountains"
+                }
+              })
+            ]
+          )
+        ]
+      )
     ])
   }
 ]
@@ -71065,26 +71318,435 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "other-bg" }, [
+    _c("div", { staticClass: "container-fluid mb-5" }, [
+      _c("div", { staticClass: "col-md-12 pt-4" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm.upcoming.length !== 0
+                ? _c(
+                    "div",
+                    _vm._l(_vm.upcoming, function(event) {
+                      return _c(
+                        "div",
+                        {
+                          key: event.id,
+                          staticClass:
+                            "p-3 pl-4 pr-4 d-flex align-items-center justify-content-between mb-4",
+                          staticStyle: {
+                            "border-bottom": "5px solid #F6B239",
+                            "border-radius": "25px"
+                          }
+                        },
+                        [
+                          _c("div", [
+                            _c("h6", { staticClass: "font-weight-bold" }, [
+                              _vm._v(_vm._s(event.name))
+                            ]),
+                            _vm._v(" "),
+                            _c("h6", [
+                              _vm._v(_vm._s(_vm.formatDate(event.event_date)))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "cursor-pointer",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#viewActiveEventModal"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.transferEvent(event)
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass:
+                                    "far fa-eye fa-3x color-blue-green"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                : _c("div", [_vm._m(1)])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _vm.done.length !== 0
+                ? _c(
+                    "div",
+                    _vm._l(_vm.done, function(event) {
+                      return _c(
+                        "div",
+                        {
+                          key: event.id,
+                          staticClass:
+                            "p-3 pl-4 pr-4 d-flex align-items-center justify-content-between mb-4",
+                          staticStyle: {
+                            "border-bottom": "5px solid #888888",
+                            "border-radius": "25px"
+                          }
+                        },
+                        [
+                          _c("div", [
+                            _c("h6", { staticClass: "font-weight-bold" }, [
+                              _vm._v(_vm._s(event.name))
+                            ]),
+                            _vm._v(" "),
+                            _c("h6", [
+                              _vm._v(_vm._s(_vm.formatDate(event.event_date)))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "cursor-pointer",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#viewActiveEventModal"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.transferEvent(event)
+                                  }
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fas fa-eye fa-3x",
+                                  staticStyle: { color: "#888888" }
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                : _c("div", [_vm._m(3)])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "viewActiveEventModal",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "viewActiveEventModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog modal-lg", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-header" }, [
+                _c(
+                  "h5",
+                  {
+                    staticClass: "modal-title",
+                    attrs: { id: "viewEventModalLabel" }
+                  },
+                  [
+                    _c("span", { staticClass: "font-weight-bold" }, [
+                      _vm._v(_vm._s(_vm.chosen_event.name))
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(4)
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body pl-5 pr-5" }, [
+                _c("img", {
+                  attrs: {
+                    src: _vm.chosen_event.pubmat_img,
+                    height: "100%",
+                    width: "100%"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h4", { staticClass: "text-center mt-4" }, [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(_vm.formatDate(_vm.chosen_event.event_date)) +
+                        "\n                        "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mt-4" }, [
+                  _c("div", { staticClass: "col-md-6 text-center" }, [
+                    _c("label", { staticClass: "font-weight-bold" }, [
+                      _vm._v(
+                        "\n                                Type\n                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h6", [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.chosen_event.type) +
+                          "\n                            "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6 text-center" }, [
+                    _c("label", { staticClass: "font-weight-bold" }, [
+                      _vm._v(
+                        "\n                                Target Audience\n                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h6", [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.chosen_event.target_audience) +
+                          "\n                            "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-4" },
+                  [
+                    _c("label", { staticClass: "font-weight-bold" }, [
+                      _vm._v(
+                        "\n                            Definition: \n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.paragraph_content, function(con, index) {
+                      return _c(
+                        "p",
+                        {
+                          key: index,
+                          staticClass: "text-justify text-indent mt-4 mb-2"
+                        },
+                        [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(con.paragraph) +
+                              "\n                        "
+                          )
+                        ]
+                      )
+                    })
+                  ],
+                  2
+                )
+              ]),
+              _vm._v(" "),
+              _vm._m(5)
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "viewInactiveEventModal",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "viewInactiveEventModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog modal-lg", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-header" }, [
+                _c(
+                  "h5",
+                  {
+                    staticClass: "modal-title",
+                    attrs: { id: "viewEventModalLabel" }
+                  },
+                  [
+                    _c("span", { staticClass: "font-weight-bold" }, [
+                      _vm._v(_vm._s(_vm.chosen_event.title))
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(6)
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body pl-5 pr-5" }),
+              _vm._v(" "),
+              _vm._m(7)
+            ])
+          ]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "other-bg" }, [
-      _c("div", { staticClass: "container-fluid mb-5" }, [
-        _c("div", { staticClass: "col-md-12 pt-4 text-center" }, [
-          _c("img", {
-            attrs: {
-              src:
-                "https://www.animatedimages.org/data/media/695/animated-under-construction-image-0035.gif",
-              border: "0",
-              alt: "animated-under-construction-image-0035"
-            }
-          })
-        ])
-      ])
+    return _c(
+      "div",
+      {
+        staticClass:
+          "font-avenir font-index-big text-center font-index-mobile-fit"
+      },
+      [
+        _c(
+          "span",
+          {
+            staticStyle: { color: "#F6B239", "text-shadow": "4px 4px #2B4D59" }
+          },
+          [_vm._v("UP")]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticStyle: { color: "#2B4D59", "text-shadow": "4px 4px #F6B239" }
+          },
+          [_vm._v("NEXT")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("h4", [_vm._v("Empty")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "font-avenir font-index-big text-center font-index-mobile-fit"
+      },
+      [
+        _c(
+          "span",
+          { staticStyle: { color: "#888888", "letter-spacing": "-6px" } },
+          [_vm._v("PREVIOUS")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("h4", [_vm._v("Empty")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-secondary",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("Close")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-secondary",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("Close")]
+      )
     ])
   }
 ]
@@ -71122,6 +71784,10 @@ var render = function() {
             [_vm._v(" Downloadable Forms ")]
           ),
           _vm._v(" "),
+          _vm.all_forms.length === 0
+            ? _c("div", { staticStyle: { "min-height": "20vh" } })
+            : _vm._e(),
+          _vm._v(" "),
           _vm._l(_vm.all_forms, function(form) {
             return _c(
               "div",
@@ -71134,13 +71800,17 @@ var render = function() {
                           _vm._v(" " + _vm._s(form.form_title) + " ")
                         ]),
                         _vm._v(" "),
-                        _c("p", { staticClass: "text-indent text-justify" }, [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s(form.form_description) +
-                              "    \n                        "
-                          )
-                        ])
+                        _c(
+                          "p",
+                          { staticClass: "text-indent text-justify form-desc" },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(form.form_description) +
+                                "    \n                        "
+                            )
+                          ]
+                        )
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-md-4 offset-md-1" }, [
@@ -71337,7 +72007,7 @@ var render = function() {
     _c("div", { staticClass: "container-fluid mb-5" }, [
       _c("div", { staticClass: "col-md-12 pt-4" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-3" }, [
+          _c("div", { staticClass: "col-md-3 order-2 other-box-height" }, [
             _c("h4", { staticClass: "font-weight-bold mt-4" }, [
               _vm._v(" Announcements ")
             ]),
@@ -71404,10 +72074,10 @@ var render = function() {
             _vm.active_newsletter.length === 0
               ? _c("div", { staticClass: "col-md-12 mt-4" }, [
                   _c("h4", { staticClass: "font-weight-bold mb-3" }, [
-                    _vm._v(" Newsletter(s) ")
+                    _vm._v(" CBA Tribune ")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "mt-3 text-center" }, [
+                  _c("div", { staticClass: "mt-3 mb-5 text-center" }, [
                     _vm._v(
                       "\n                            Empty\n                        "
                     )
@@ -71418,39 +72088,49 @@ var render = function() {
                   { staticClass: "col-md-12 mt-4" },
                   [
                     _c("h4", { staticClass: "font-weight-bold mb-3" }, [
-                      _vm._v(" Newsletter(s) ")
+                      _vm._v(" CBA Tribune ")
                     ]),
                     _vm._v(" "),
                     _vm._l(_vm.active_newsletter, function(news) {
-                      return _c("div", { key: news.id, staticClass: "mb-5" }, [
-                        _c("hr"),
-                        _vm._v(" "),
-                        _c("h6", { staticClass: "font-weight-bold" }, [
-                          _vm._v(" " + _vm._s(news.title) + " ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mb-4" }, [
-                          _c("span", [
-                            _vm._v(
-                              " Published: " +
-                                _vm._s(_vm.formatDate(news.date_published)) +
-                                " "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("img", {
-                          staticStyle: { height: "100%", width: "100%" },
-                          attrs: { src: news.image, alt: "Newsletter Image" }
-                        })
-                      ])
+                      return _c(
+                        "div",
+                        { key: news.id, staticClass: "mb-5" },
+                        [
+                          _c("hr"),
+                          _vm._v(" "),
+                          _c("h6", { staticClass: "font-weight-bold" }, [
+                            _vm._v(" " + _vm._s(news.title) + " ")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "mb-4" }, [
+                            _c("span", [
+                              _vm._v(
+                                " Published: " +
+                                  _vm._s(_vm.formatDate(news.date_published)) +
+                                  " "
+                              )
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(news.newsletter_images, function(n) {
+                            return _c("div", { key: n.id }, [
+                              _c("img", {
+                                staticClass: "mt-4",
+                                staticStyle: { height: "100%", width: "100%" },
+                                attrs: { src: n.image, alt: "Newsletter Image" }
+                              })
+                            ])
+                          })
+                        ],
+                        2
+                      )
                     })
                   ],
                   2
                 )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" }, [
+          _c("div", { staticClass: "col-md-3 other-box-height" }, [
             _c("div", [
               _c("h4", { staticClass: "font-weight-bold mt-4 ml-4" }, [
                 _vm._v(" Transparency Reports ")
@@ -71578,12 +72258,6 @@ var render = function() {
                                         ) +
                                         " "
                                     )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "mt-2" }, [
-                                    _vm._v(
-                                      " " + _vm._s(report.description) + " "
-                                    )
                                   ])
                                 ]),
                                 _vm._v(" "),
@@ -71677,14 +72351,14 @@ var staticRenderFns = [
         "a",
         {
           staticClass: "olOffice",
-          attrs: { href: "https://bit.ly/UEMlaCBA21-22" }
+          attrs: { href: "https://bit.ly/UEMlaCBA21-22", target: "_blank" }
         },
         [
           _c("h3", { staticClass: "font-weight-bold mb-0" }, [
-            _vm._v("Online "),
-            _c("span", { staticStyle: { color: "#2B4D59" } }, [_vm._v("BA")]),
+            _vm._v("Join our "),
+            _c("span", { staticStyle: { color: "#2B4D59" } }, [_vm._v("CBA")]),
             _c("span", { staticStyle: { color: "#F6B239" } }, [_vm._v("SC")]),
-            _vm._v(" Office")
+            _vm._v(" Discord Server")
           ]),
           _vm._v(" "),
           _c("h6", { staticClass: "mt-0" }, [_vm._v("Click Here")])
@@ -71784,11 +72458,11 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("br"),
-            _vm._v(" STUDENT COUNCIL A.Y. 2021-2022\n            ")
+            _vm._v(" STUDENT COUNCIL\n            ")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row text-center mt-5" }, [
-            _c("div", { staticClass: "col-md-2 offset-3" }, [
+            _c("div", { staticClass: "col-md-2 offset-md-3" }, [
               _c("div", { staticClass: "col-md-12" }, [
                 _c("img", {
                   attrs: {
@@ -71856,7 +72530,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row text-center mt-5" }, [
-            _c("div", { staticClass: "col-md-2 offset-2" }, [
+            _c("div", { staticClass: "col-md-2 offset-md-2" }, [
               _c("div", { staticClass: "col-md-12" }, [
                 _c("img", {
                   attrs: {
@@ -71959,7 +72633,7 @@ var staticRenderFns = [
                 _c(
                   "div",
                   { staticClass: "font-weight-bold mt-2 mb-0 color-red" },
-                  [_vm._v(" Charles Louie Magas ")]
+                  [_vm._v(" Charles Louie D. Magas ")]
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "font-weight-bold" }, [
@@ -71981,7 +72655,7 @@ var staticRenderFns = [
                 _c(
                   "div",
                   { staticClass: "font-weight-bold mt-2 mb-0 color-red" },
-                  [_vm._v(" Patricia D. Basilio ")]
+                  [_vm._v(" Niña Patricia D. Basilio ")]
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "font-weight-bold" }, [
@@ -72047,7 +72721,7 @@ var staticRenderFns = [
                 _c(
                   "div",
                   { staticClass: "font-weight-bold mt-2 mb-0 color-red" },
-                  [_vm._v(" Shanen L. Del Rosario ")]
+                  [_vm._v(" Prof. Marlyn P. Buendia ")]
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "font-weight-bold" }, [
@@ -72095,97 +72769,113 @@ var render = function() {
             [_vm._v(" Processes ")]
           ),
           _vm._v(" "),
-          _vm._l(_vm.all_forms, function(form) {
-            return _c("div", { key: form.id, staticClass: "row mb-5 pl-3" }, [
-              form.process_title !== null
-                ? _c("div", [
-                    _c("h5", { staticClass: "font-weight-bold" }, [
-                      _vm._v(" " + _vm._s(form.process_title) + " ")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "text-indent text-justify" }, [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(form.process_description) +
-                          "\n                    "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    form.video_file !== null
-                      ? _c(
-                          "a",
-                          {
-                            attrs: {
-                              href: form.video_file,
-                              download: form.process_title + " - video"
-                            }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary mr-4",
-                                attrs: { type: "submit" }
-                              },
-                              [_vm._v(" Video Tutorial ")]
-                            )
-                          ]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    form.audio_file !== null
-                      ? _c(
-                          "a",
-                          {
-                            attrs: {
-                              href: form.audio_file,
-                              download: form.process_title + " - audio"
-                            }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary mr-4",
-                                attrs: { type: "button" }
-                              },
-                              [_vm._v(" Audio Tutorial ")]
-                            )
-                          ]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    form.instruction_file !== null
-                      ? _c(
-                          "a",
-                          {
-                            attrs: {
-                              href: form.instruction_file,
-                              download: form.process_title + " - instruction"
-                            }
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary mr-4",
-                                attrs: { type: "button" }
-                              },
-                              [
-                                _vm._v(
-                                  " Download " +
-                                    _vm._s(form.process_title) +
-                                    " "
-                                )
-                              ]
-                            )
-                          ]
-                        )
+          _vm.all_forms.length === 0
+            ? _c("div", { staticStyle: { "min-height": "20vh" } })
+            : _vm._l(_vm.all_forms, function(form) {
+                return _c(
+                  "div",
+                  { key: form.id, staticClass: "row mb-5 pl-3" },
+                  [
+                    form.process_title !== null
+                      ? _c("div", [
+                          _c("h5", { staticClass: "font-weight-bold" }, [
+                            _vm._v(" " + _vm._s(form.process_title) + " ")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            {
+                              staticClass: "text-indent text-justify form-desc"
+                            },
+                            [
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(form.process_description) +
+                                  "\n                    "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          form.video_file !== null
+                            ? _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: form.video_file,
+                                    download: form.process_title + " - video"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-primary mr-4 mobile-button",
+                                      attrs: { type: "submit" }
+                                    },
+                                    [_vm._v(" Video Tutorial ")]
+                                  )
+                                ]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          form.audio_file !== null
+                            ? _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: form.audio_file,
+                                    download: form.process_title + " - audio"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-primary mr-4 mobile-button",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v(" Audio Tutorial ")]
+                                  )
+                                ]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          form.instruction_file !== null
+                            ? _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: form.instruction_file,
+                                    download:
+                                      form.process_title + " - instruction"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "btn btn-primary mr-4 mobile-button",
+                                      attrs: { type: "button" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        " Download " +
+                                          _vm._s(form.process_title) +
+                                          " "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            : _vm._e()
+                        ])
                       : _vm._e()
-                  ])
-                : _vm._e()
-            ])
-          })
+                  ]
+                )
+              })
         ],
         2
       )

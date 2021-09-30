@@ -3,7 +3,7 @@
         <div class="card mb-5 mt-2 border shadow">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="font-weight-bold"> Newsletter </h4>
+                    <h4 class="font-weight-bold"> CBA Tribune </h4>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#addNewsModal"> Add New Newsletter </button>
                 </div>
                 <div class="table-report mt-4">
@@ -76,7 +76,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold"> Image File </label>
-                                <input type="file" class="form-control" name="image_file" id="image_file_id" accept=".jpeg, .jpg, .png" required>
+                                <input type="file" class="form-control" name="image_file[]" id="image_file_id" accept=".jpeg, .jpg, .png" multiple required>
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold"> Status </label><br>
@@ -110,7 +110,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img :src="view_news.image" style="width: 100%; height: 100%;">
+                        <div v-for="n in view_news.newsletter_images" :key="n.id">
+                            <img :src="n.image" alt="Newsletter Image" style="height: 100%; width: 100%;" class="mt-4">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -256,8 +258,11 @@ export default {
                 if (result.isConfirmed) {
                     let formData = new FormData()
                     var file = document.querySelector('#image_file_id');
+                    let x = 0;
 
-                    formData.append('image', file.files[0]);
+                    for (let x = 0; x < file.files.length; x++) {
+                        formData.append('image[]', file.files[x]);
+                    }
                     formData.append('title', this.form.title);
                     formData.append('date_published', moment(this.form.published_date).format('YYYY-MM-DD'));
                     formData.append('status', this.form.status);

@@ -20,7 +20,7 @@
                         <tr v-for="a in announcements" :key="a.id">
                             <td class="w-20"> {{ a.title }} </td>
                             <td class="w-50"> {{ a.description }} </td>
-                            <td class="w-15 text-center"> {{ formatDate(a.event_date) }} </td>
+                            <td class="w-15 text-center"> {{ formatDate(a.announcement_date) }} </td>
                             <td class="w-15 text-center">
                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editAnnModal" @click="getAnn(a)"><i class="far fa-edit"></i></button>
                                 <button type="button" class="btn btn-danger" @click="deleteAnnouncement(a)"><i class="fas fa-times"></i></button>
@@ -168,6 +168,7 @@ export default {
             }).then((result) => {
                 if (result.isConfirmed) {
                     axios.post('api/announcements/editAnn', {
+                        id: this.form.id,
                         title: this.form.title,
                         description: this.form.description,
                         announcement_date: moment(this.form.announcement_date).format('YYYY-MM-DD 00:00:00')
@@ -190,11 +191,13 @@ export default {
         },
         getAnn(ann) {
             this.specific_ann = ann;
+            this.form.id = ann.id;
             this.form.title = ann.title;
             this.form.description = ann.description;
             this.form.announcement_date = ann.announcement_date;
         },
         clearForm() {
+            this.form.id = '';
             this.form.title = '';
             this.form.description = '';
             this.form.announcement_date = '';

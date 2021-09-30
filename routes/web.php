@@ -63,7 +63,7 @@ Route::group(['prefix' => '/'], function () {
     });
 
     Route::group(['prefix' => 'events'], function () {
-        Route::get('getEvents', [EventsController::class, 'getEvents']);
+        Route::get('getDetailedEvents', [EventsController::class, 'getDetailedEvents']);
     });
 });
 

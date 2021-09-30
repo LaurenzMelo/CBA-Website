@@ -29,7 +29,7 @@
                 @route('website.ind_blog') nav-yellow @endif">
                 <a class="navbar-brand" href="{{ route('website.index') }}" style="margin-left:40px"><img src="{{url('images/BASC LOGO.png')}}" height="75" width="75"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="border: 2px solid #222222">
-                    <span class="navbar-toggler-icon" style="color: #222222"></span>
+                    <i class="fas fa-bars" style="color:#222222;"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ml-auto font-weight-bold navbar-spacing font-black navbar-fontsize" style="margin-right:40px;">
@@ -79,15 +79,15 @@
                             <div class="row font-size-footer">
                                 <div class="col-md-6">
                                     <div class="mt-2 mb-2 font-weight-bold">
-                                        <a href="https://www.facebook.com/ue.cbasc" class="link-footer"> <i class="fab fa-facebook-f mr-2"></i> ue.cbasc </a>
+                                        <a href="https://www.facebook.com/ue.cbasc" class="link-footer" target="_blank"> <i class="fab fa-facebook-f mr-2"></i> ue.cbasc </a>
                                     </div>
                                     <div class="font-weight-bold">
-                                        <a href="https://twitter.com/uemnl_cbasc" class="link-footer"> <i class="fab fa-twitter mr-2"></i> @uemnl_cbasc </a>
+                                        <a href="https://twitter.com/uemnl_cbasc" class="link-footer" target="_blank"> <i class="fab fa-twitter mr-2"></i> @uemnl_cbasc </a>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mt-2 mb-2 font-weight-bold">
-                                        <a href="https://www.instagram.com/uemnl_cbasc" class="link-footer"> <i class="fab fa-instagram mr-2"></i> uemnl_cbasc </a>
+                                        <a href="https://www.instagram.com/uemnl_cbasc" class="link-footer" target="_blank"> <i class="fab fa-instagram mr-2"></i> uemnl_cbasc </a>
                                     </div>
                                     <div class="font-weight-bold" style="color: #2B4D59">
                                         <i class="fas fa-envelope mr-2"></i> uemnl_cbasc@gmail.com
