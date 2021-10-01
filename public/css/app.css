@@ -11223,6 +11223,15 @@ ul ul a {
   cursor: pointer;
 }
 
+.margin-icon {
+  margin-left: 40px;
+}
+
+.construction-gif {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 @media only screen and (max-width: 768px) {
   .font-index-big {
     font-size: 5rem !important;
@@ -11258,6 +11267,14 @@ ul ul a {
 
   .blog-mobile {
     padding: 15px !important;
+  }
+
+  .order-first-mobile {
+    order: -1;
+  }
+
+  .margin-icon {
+    margin-left: 5px;
   }
 }
 

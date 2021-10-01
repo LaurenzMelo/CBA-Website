@@ -3,7 +3,7 @@
         <div class="container-fluid mb-5">
             <div class="col-md-12 pt-4">
                 <div class="row">
-                    <div class="col-md-3 order-2 other-box-height">
+                    <div class="col-md-3 other-box-height">
                         <h4 class="font-weight-bold mt-4"> Announcements </h4>
                         <hr class="m-0 hr-15">
                         <div v-if="announcements.length === 0">
@@ -23,7 +23,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 shadow">
+                    <div class="col-md-6 shadow order-first-mobile">
                         <div class="col-md-12 mb-4">
                             <div class="font-avenir font-index-big text-right">
                                 <span style="color: #F6B239">CBA</span><span style="color: #2B4D59">SC</span><span style="color: #39998E">.</span>

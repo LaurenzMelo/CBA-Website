@@ -27,7 +27,7 @@
             <nav class="navbar navbar-expand-lg reduce-padding-top pb-4 pt-4 @route('website.processes') nav-light-bg @endif @route('website.forms') nav-light-bg @endif
                 @route('website.events') nav-blue-green @endif @route('website.blog') nav-yellow @endif @route('website.know_us') nav-orange @endif  @route('website.directories') nav-red @endif
                 @route('website.ind_blog') nav-yellow @endif">
-                <a class="navbar-brand" href="{{ route('website.index') }}" style="margin-left:40px"><img src="{{url('images/BASC LOGO.png')}}" height="75" width="75"></a>
+                <a class="navbar-brand margin-icon" href="{{ route('website.index') }}"><img src="{{url('images/BASC LOGO.png')}}" height="75" width="75"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="border: 2px solid #222222">
                     <i class="fas fa-bars" style="color:#222222;"></i>
                 </button>

@@ -4763,6 +4763,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -72007,7 +72010,7 @@ var render = function() {
     _c("div", { staticClass: "container-fluid mb-5" }, [
       _c("div", { staticClass: "col-md-12 pt-4" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-3 order-2 other-box-height" }, [
+          _c("div", { staticClass: "col-md-3 other-box-height" }, [
             _c("h4", { staticClass: "font-weight-bold mt-4" }, [
               _vm._v(" Announcements ")
             ]),
@@ -72066,7 +72069,7 @@ var render = function() {
                 )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 shadow" }, [
+          _c("div", { staticClass: "col-md-6 shadow order-first-mobile" }, [
             _vm._m(1),
             _vm._v(" "),
             _vm._m(2),
@@ -72448,7 +72451,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "other-bg" }, [
       _c("div", { staticClass: "container-fluid mb-5" }, [
-        _c("div", { staticClass: "col-md-12 pt-4" }, [
+        _c("div", { staticClass: "text-center construction-gif" }, [
+          _c("img", { attrs: { src: "images/construction.gif" } })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 pt-4 d-none" }, [
           _c("h1", { staticClass: "font-weight-bold text-center mt-5" }, [
             _vm._v("\n                COLLEGE OF "),
             _c("span", { staticClass: "color-yellow" }, [_vm._v("BUSINESS")]),

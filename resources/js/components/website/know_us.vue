@@ -1,7 +1,10 @@
 <template>
     <div class="other-bg">
         <div class="container-fluid mb-5">
-            <div class="col-md-12 pt-4">
+            <div class="text-center construction-gif">
+                <img src="images/construction.gif">
+            </div>
+            <div class="col-md-12 pt-4 d-none">
                 <h1 class="font-weight-bold text-center mt-5">
                     COLLEGE OF <span class="color-yellow">BUSINESS</span> <span class="color-blue-green">ADMINISTRATION</span>
                     <br> STUDENT COUNCIL
